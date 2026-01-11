@@ -1,3 +1,5 @@
+-- This project is developed for research and learning purposes --
+
 --- Requirement ---
 * Visual Studio (install all neccessary to run ASP.NET project)
 * SQL Server Management Studio Management Studio
@@ -16,4 +18,5 @@ Admin:
 Employee:
 1 --> username: trungtruc; pass: 123
 2 --> username: nam2004; pass: 123
+
 3 --> username: nhau777; pass: 123
