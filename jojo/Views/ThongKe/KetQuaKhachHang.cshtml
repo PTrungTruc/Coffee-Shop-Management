@@ -1,0 +1,67 @@
+﻿@using jojo.Models;
+@using jojo.DTO;
+@{
+    Layout = null;
+    NhanVienDto employee = ViewBag.nhanvien as NhanVienDto;
+    List<TKKhachHang> list = ViewBag.khachhang as List<TKKhachHang>;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/image/logo.ico">
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" type="text/css" />
+    <script src="/Scripts/jquery-3.1.1.min.js"></script>
+    <title>Customers</title>
+    <script>
+
+    </script>
+    <style>
+        .minheight {
+            min-height: 370px;
+        }
+    </style>
+</head>
+<body>
+    @RenderPage("/Views/Share/nav_quanly.cshtml")
+    <div class="container minheight">
+        <div class="row">
+            <h2 class="text-center text-danger">Customer Statistics Results</h2>
+            <h3>From Date: @ViewBag.tungay</h3>
+            <h3>To Date: @ViewBag.toingay</h3>
+        </div>
+        <br />
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Customer Name</th>
+                        <th>Phone Number</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Visits</th>
+                        <th>Total Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < list.Count; i++)
+                    {
+                        <tr>
+                            <td>@list[i].tenkhachhang</td>
+                            <td>@list[i].sdtkhachhang</td>
+                            <td>@list[i].diachi</td>
+                            <td>@list[i].email</td>
+                            <td>@list[i].solan</td>
+                            <td>@list[i].tongtien</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    @RenderPage("/Views/Share/footer.cshtml")
+</body>
+</html> 1

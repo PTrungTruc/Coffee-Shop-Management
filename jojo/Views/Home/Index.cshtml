@@ -1,0 +1,104 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="~/image/logo.ico">
+
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" type="text/css" />
+    <title>T&T</title>
+    <style>
+        .mypanel {
+            min-height: 440px;
+            background: #CAB3AE; /* Màu nền chính */
+        }
+        body {
+            font-family: Arial, sans-serif; /* Font family */
+            background: url(/image/background-coffee.png) no-repeat center center; /*  #DDDB76 Màu nền chính */
+            background-size: cover;
+        }
+
+        .header-container {
+            text-align: center;
+            padding: 6px 4px; /* Add padding for spacing */
+            position: relative; /* Positioning for overlay */
+        }
+
+            .header-container h1 {
+                font-size: 3rem; /* Large font size for the main title */
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+                margin-bottom: 20px; /* Space below the title */
+            }
+
+            .header-container h3 {
+                font-size: 1.5rem; /* Medium font size for the subtitle */
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+            }
+        .logo-image {
+            max-width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+            margin: 20px 0; /* Add margin above and below the image */
+        }
+    </style>
+</head>
+<body>
+    <br />
+    <div class="header-container">
+        <h1 class="text-primary" style="font-size: 60px;">T&T Coffee</h1>
+        <h3 class="text-success" style="font-size: 40px;">A Good Coffee For A Good Morning</h3>
+    </div>
+    <br /><br />
+          <div class="container mt-5">
+              <div class="row justify-content-center">
+
+                  <div class="col-sm-offset-3 col-sm-6">
+                      <div class="panel panel-info mypanel">
+                          <div class="panel-heading justify-content-center"><h3 class="panel-title text-center">Đăng nhập</h3></div>
+                          <div class="panel-body">
+                              <div class="text-center">
+                                  <img src="/image/logoC.png" alt="Logo" class="logo-image"> <!-- Responsive logo -->
+                              </div>
+                              <br>
+                              @if (ViewBag.ErrorMessage != null)
+                              {
+                                  <div class="alert alert-danger text-center">@ViewBag.ErrorMessage</div>
+                              }
+                              <br>
+                              <form class="form-horizontal" action="/Home/Login" method="post">
+                                  <div class="form-group">
+                                      <label class="control-label col-sm-3">Tài khoản</label>
+                                      <div class="col-sm-7">
+                                          <input type="text" class="form-control" id="taikhoan" name="taikhoan">
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label class="control-label col-sm-3">Mật khẩu</label>
+                                      <div class="col-sm-7">
+                                          <input type="password" class="form-control" id="matkhau" name="matkhau">
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label class="control-label col-sm-3"></label>
+                                      <div class="col-sm-7">
+                                          <input type="submit" class="form-control btn-primary" value="Đăng Nhập">
+                                      </div>
+                                  </div>
+                              </form>
+                              <br><br>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+
+          </div>
+
+
+    @RenderPage("/Views/Share/footer.cshtml")
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\jojo.dll.config
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\jojo.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\jojo.pdb
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\AutoMapper.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\EntityFramework.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\EntityFramework.SqlServer.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\Microsoft.Web.Infrastructure.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\Newtonsoft.Json.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\PagedList.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\PagedList.Mvc.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\System.ValueTuple.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\System.Web.Helpers.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\System.Web.Mvc.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\System.Web.Razor.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\System.Web.WebPages.Deployment.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\System.Web.WebPages.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\System.Web.WebPages.Razor.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\AutoMapper.pdb
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\AutoMapper.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\EntityFramework.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\EntityFramework.SqlServer.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\Newtonsoft.Json.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\PagedList.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\PagedList.Mvc.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\System.ValueTuple.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\System.Web.Helpers.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\System.Web.Mvc.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\System.Web.Razor.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\System.Web.WebPages.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\System.Web.WebPages.Deployment.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\bin\System.Web.WebPages.Razor.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\obj\Debug\jojo.csproj.AssemblyReference.cache
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\obj\Debug\jojo.csproj.CoreCompileInputs.cache
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\obj\Debug\jojo.csproj.CopyComplete
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\obj\Debug\jojo.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\522H0072_522H0110\jojo\obj\Debug\jojo.pdb
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\jojo.dll.config
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\jojo.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\jojo.pdb
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\AutoMapper.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\EntityFramework.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\EntityFramework.SqlServer.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\Microsoft.Web.Infrastructure.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\Newtonsoft.Json.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\PagedList.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\PagedList.Mvc.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\System.ValueTuple.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\System.Web.Helpers.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\System.Web.Mvc.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\System.Web.Razor.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\System.Web.WebPages.Deployment.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\System.Web.WebPages.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\System.Web.WebPages.Razor.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\AutoMapper.pdb
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\AutoMapper.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\EntityFramework.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\EntityFramework.SqlServer.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\Newtonsoft.Json.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\PagedList.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\PagedList.Mvc.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\System.ValueTuple.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\System.Web.Helpers.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\System.Web.Mvc.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\System.Web.Razor.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\System.Web.WebPages.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\System.Web.WebPages.Deployment.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\bin\System.Web.WebPages.Razor.xml
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\obj\Debug\jojo.csproj.AssemblyReference.cache
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\obj\Debug\jojo.csproj.CoreCompileInputs.cache
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\obj\Debug\jojo.csproj.CopyComplete
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\obj\Debug\jojo.dll
+D:\522H0072\HK2_2025\.Net\522H0072.Net\CK\Final project T&T\jojo\obj\Debug\jojo.pdb

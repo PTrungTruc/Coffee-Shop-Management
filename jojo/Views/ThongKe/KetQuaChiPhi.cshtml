@@ -1,0 +1,62 @@
+﻿@using jojo.Models;
+@using jojo.DTO;
+@{
+    Layout = null;
+    NhanVienDto employee = ViewBag.nhanvien as NhanVienDto;
+    List<TKChiPhi> list = ViewBag.chiphi as List<TKChiPhi>;
+    list = list.OrderByDescending(x => x.tongchiphi).ToList();
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/image/logo.ico">
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" type="text/css" />
+    <script src="/Scripts/jquery-3.1.1.min.js"></script>
+    <title>Expenses</title>
+    <script>
+
+    </script>
+    <style>
+        .minheight {
+            min-height: 370px;
+        }
+    </style>
+</head>
+<body>
+    @RenderPage("/Views/Share/nav_quanly.cshtml")
+    <div class="container minheight">
+        <div class="row">
+            <h2 class="text-center text-primary">Expense Statistics Results</h2>
+            <h3>From Date: @ViewBag.tungay</h3>
+            <h3>To Date: @ViewBag.toingay</h3>
+            <h3>Total Expenses: @ViewBag.tongchiphi</h3>
+            <h3>Total Revenue: @ViewBag.doanhthu</h3>
+            <h3 class="text-primary">=> Profit: @ViewBag.loinhuan</h3>
+        </div>
+        <br />
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Expense Type</th>
+                        <th>Expenses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < list.Count; i++)
+                    {
+                        <tr>
+                            <td>@list[i].ten</td>
+                            <td>@list[i].tongchiphi</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    @RenderPage("/Views/Share/footer.cshtml")
+</body>
+</html> 1

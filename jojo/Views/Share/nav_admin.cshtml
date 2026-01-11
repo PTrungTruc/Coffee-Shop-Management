@@ -1,0 +1,113 @@
+﻿<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/Content/bootstrap.min.css" type="text/css" />
+<style>
+    /* General styling */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Navbar container styling */
+    .navbar {
+        background-color: #CAB3AE;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 25px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+        /* Brand logo styling */
+        .navbar .navbar-brand {
+            color: white;
+            font-size: 2rem; /* Increased font size for brand */
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+            .navbar .navbar-brand img {
+                margin-right: 8px;
+                width: 30px; /* Adjusted logo size */
+                height: auto;
+            }
+
+    /* Center navigation styling */
+    .nav-center {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        margin: 10px 0;
+        padding: 0;
+    }
+
+        .nav-center > li {
+            list-style-type: none;
+            margin: 0 20px;
+        }
+
+            .nav-center > li > a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.5rem; /* Increased font size for center nav items */
+                transition: background-color 0.3s, color 0.3s;
+                display: flex;
+                align-items: center;
+                padding: 8px 15px;
+            }
+
+                .nav-center > li > a:hover {
+                    background-color: #2e5930;
+                    border-radius: 5px;
+                }
+
+    /* Right navigation styling */
+    .nav-right {
+        display: flex;
+        align-items: center;
+    }
+
+        .nav-right > li {
+            list-style-type: none;
+            margin-left: 20px;
+        }
+
+            .nav-right > li > a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.5rem; /* Increased font size for right nav items */
+                transition: background-color 0.3s, color 0.3s;
+                display: flex;
+                align-items: center;
+                padding: 8px 15px;
+            }
+
+                .nav-right > li > a:hover {
+                    background-color: #2e5930;
+                    border-radius: 5px;
+                }
+</style>
+
+<nav class="navbar">
+    <!-- Logo -->
+    <a class="navbar-brand" href="/Admin">
+        <img src="~/image/logoC.png" alt="Logo" style="height: auto; width: 60px;">
+        <span>T & T House</span>
+    </a>
+
+    <!-- Center Navigation -->
+    <ul class="nav nav-center">
+        <li><a href="/Admin/NhanVien">Employees</a></li>
+        <li><a href="/Admin/SanPham">Products</a></li>
+        <li><a href="/Admin/HoaDon">Invoices</a></li>
+    </ul>
+
+    <!-- Right Navigation -->
+    <ul class="nav nav-right">
+        <li><a href="#" title="Hi Admin">Hi! Admin</a></li>
+        <li><a href="/Admin/Logout" title="Logout">Logout</a></li>
+    </ul>
+</nav>

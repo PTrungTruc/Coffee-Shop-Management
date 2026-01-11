@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" type="text/css" />
+    <title>Admin Login</title>
+    <link rel="shortcut icon" href="~/image/logo.ico">
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/style.css")" />
+	<style>
+        body {
+            background: #CAB3AE; /* Màu nền chính */
+            background: url(/image/background-coffee.png) #D6C4B8 no-repeat center center; /*  #DDDB76 Màu nền chính */
+            background-size: cover;
+        }
+        /* Các phần khác trong CSS nếu cần */
+    </style>
+
+</head>
+<body>
+    <section class="container">
+        <div class="login-container">
+
+            <div class="circle circle-one"></div>
+            <div class="form-container">
+
+                <h1 class="opacity" style=" text-align: center;">ADMIN LOGIN</h1>
+                @if (ViewBag.ErrorMessageAdmin != null)
+                {
+                    <div class="alert alert-danger text-center">@ViewBag.ErrorMessageAdmin</div>
+                }
+                <form class="form-horizontal" action="/Admin/Login" method="post">
+
+                    <input type="text" class="form-control" id="taikhoan" name="taikhoan" placeholder="USERNAME" />
+                    <input type="password" class="form-control" id="matkhau" name="matkhau" placeholder="PASSWORD" />
+                    <input type="submit" class="opacity" value="Login" />
+                </form>
+            </div>
+            <div class="circle circle-two"></div>
+        </div>
+        <div class="theme-btn-container"></div>
+    </section>
+
+</body>
+</html>

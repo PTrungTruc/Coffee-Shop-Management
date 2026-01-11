@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d48a799e489f454498f3a55f9b393c55" Name="Diagram1">
+        <EntityTypeShape EntityType="jojo.admin" Width="1.5" PointX="5.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="jojo.bangphu" Width="1.5" PointX="10.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="jojo.bangxoahoadon" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="jojo.chiphi" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="jojo.chitiethoadon" Width="1.5" PointX="8.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="jojo.hoadon" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="jojo.khachhang" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="jojo.loaichiphi" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="jojo.nhanvien" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="jojo.sanpham" Width="1.5" PointX="6" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="jojo.sanphamphu" Width="1.5" PointX="8.25" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="jojo.FK__bangphu__idchiti__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="jojo.FK__bangphu__idsanph__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="jojo.FK__bangxoaho__idhoa__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="jojo.FK__bangxoaho__idnha__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="jojo.FK__chiphi__idloaich__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="jojo.FK__chitietho__idhoa__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="jojo.FK__chitietho__idspc__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="jojo.FK__hoadon__idkhachh__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="jojo.FK__hoadon__idnhanvi__52593CB8" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

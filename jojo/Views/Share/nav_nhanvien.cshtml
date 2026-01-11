@@ -1,0 +1,27 @@
+﻿<nav class="navbar navbar-default" style="background-color: #CAB3AE;">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="navbar-header d-flex align-items-center">
+            <!-- Logo -->
+            <a class="navbar-brand" href="/">
+                <img src="~/image/logoC.png" alt="Logo" style="width: 25px; height: auto; margin-right: 8px;">
+            </a>
+            <!-- Tên doanh nghiệp -->
+            <a class="navbar-brand" href="/">
+                <span style="color:white">T & T House</span>
+            </a>
+        </div>
+
+        <!-- Các liên kết trên navbar -->
+        <ul class="nav navbar-nav">
+            <li><a href="/HoaDon"><span style="color:white">Invoices</span></a></li>
+            <li><a target="_blank" href="/BaoCaoCuoiNgay"><span style="color:white">End of Day Report</span></a></li>
+        </ul>
+
+        <!-- Thông tin nhân viên và Logout -->
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/NhanVien/ChiTiet?id=@ViewBag.nhanvien.id"><span class="text-primary" style="display:none" id="idnhanvien">@ViewBag.nhanvien.id</span></a></li>
+            <li><a href="/NhanVien/ChiTiet?id=@ViewBag.nhanvien.id"><span class="text-primary"><span id="tennhanvien" style="color:white">Hi @ViewBag.nhanvien.hovaten!</span></span></a></li>
+            <li><a href="/Home/Logout"><span style="color:white">Logout</span></a></li>
+        </ul>
+    </div>
+</nav>

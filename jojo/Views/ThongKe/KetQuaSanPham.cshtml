@@ -1,0 +1,184 @@
+﻿@using jojo.Models;
+@using jojo.DTO;
+@{
+    Layout = null;
+    NhanVienDto employee = ViewBag.nhanvien as NhanVienDto;
+    List<TKSanPham> list = ViewBag.sanpham as List<TKSanPham>;
+    var smoothies = 0;
+    var milkTea = 0;
+    var otherProducts = 0;
+    var additionalProducts = 0;
+
+    list = list.OrderByDescending(x => x.soluong).ToList();
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/image/logo.ico">
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" type="text/css" />
+    <script src="/Scripts/jquery-3.1.1.min.js"></script>
+    <title>Products</title>
+    <script>
+
+    </script>
+    <style>
+        .minheight {
+            min-height: 370px;
+        }
+    </style>
+</head>
+<body>
+    @RenderPage("/Views/Share/nav_quanly.cshtml")
+    <div class="container minheight">
+        <div class="row">
+            <h2 class="text-center text-primary">Product Statistics Results</h2>
+            <div class="col-sm-4 text-center">
+                <h3>From Date: @ViewBag.tungay</h3>
+                <h3>To Date: @ViewBag.toingay</h3>
+            </div>
+        </div>
+        <br />
+
+
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading"><h3 class="panel-title">Cafe - Smoothies</h3></div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < list.Count; i++)
+                                {
+                                    if (list[i].loai == 1)
+                                    {
+                                        smoothies = smoothies + list[i].soluong;
+                                        <tr>
+                                            <td>@list[i].tensanpham</td>
+                                            <td>@list[i].soluong</td>
+                                        </tr>
+                                    }
+
+                                }
+                            </tbody>
+                        </table>
+                        <h3 class="text-primary">Total: @smoothies</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading"><h3 class="panel-title">Milk Tea</h3></div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < list.Count; i++)
+                                {
+                                    if (list[i].loai == 2)
+                                    {
+                                        milkTea = milkTea + list[i].soluong;
+                                        <tr>
+                                            <td>@list[i].tensanpham</td>
+                                            <td>@list[i].soluong</td>
+                                        </tr>
+                                    }
+
+                                }
+                            </tbody>
+                        </table>
+                        <h3 class="text-primary">Total: @milkTea</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading"><h3 class="panel-title">Other Products</h3></div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < list.Count; i++)
+                                {
+                                    if (list[i].loai == 3)
+                                    {
+                                        otherProducts = otherProducts + list[i].soluong;
+                                        <tr>
+                                            <td>@list[i].tensanpham</td>
+                                            <td>@list[i].soluong</td>
+                                        </tr>
+                                    }
+
+                                }
+                            </tbody>
+                        </table>
+                        <h3 class="text-primary">Total: @otherProducts</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading"><h3 class="panel-title">Additional Products</h3></div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < list.Count; i++)
+                                {
+                                    if (list[i].loai == 4)
+                                    {
+                                        additionalProducts = additionalProducts + list[i].soluong;
+                                        <tr>
+                                            <td>@list[i].tensanpham</td>
+                                            <td>@list[i].soluong</td>
+                                        </tr>
+                                    }
+
+                                }
+                            </tbody>
+                        </table>
+                        <h3 class="text-primary">Total: @additionalProducts</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2 class="text-center text-primary">All Products: @(smoothies + milkTea + otherProducts + additionalProducts)</h2>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+    @RenderPage("/Views/Share/footer.cshtml")
+</body>
+</html>

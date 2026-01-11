@@ -1,0 +1,147 @@
+﻿@using jojo.Models;
+@using jojo.DTO;
+@{
+    Layout = null;
+    NhanVienDto employee = ViewBag.nhanvien as NhanVienDto;
+    List<sanpham> products = ViewBag.sanpham as List<sanpham>;
+    List<sanphamphu> additionalProducts = ViewBag.sanphamphu as List<sanphamphu>;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/image/logo.ico">
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" type="text/css" />
+    <title>Products</title>
+    <style>
+        .table-hover tr:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    @RenderPage("/Views/Share/nav_quanly.cshtml")
+    <div class="container">
+
+        <br /><br />
+
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading"><h3 class="panel-title">Coffee - Smoothies</h3></div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < products.Count; i++)
+                                {
+                                    if (products[i].loai == "1")
+                                    {
+                                        <tr>
+                                            <td>@products[i].ten</td>
+                                            <td>@products[i].gia</td>
+                                        </tr>
+                                    }
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading"><h3 class="panel-title">Milk Tea</h3></div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < products.Count; i++)
+                                {
+                                    if (products[i].loai == "2")
+                                    {
+                                        <tr>
+                                            <td>@products[i].ten</td>
+                                            <td>@products[i].gia</td>
+                                        </tr>
+                                    }
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading"><h3 class="panel-title">Other Products</h3></div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < products.Count; i++)
+                                {
+                                    if (products[i].loai == "3")
+                                    {
+                                        <tr>
+                                            <td>@products[i].ten</td>
+                                            <td>@products[i].gia</td>
+                                        </tr>
+                                    }
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading"><h3 class="panel-title">Additional Products</h3></div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < additionalProducts.Count; i++)
+                                {
+                                    <tr>
+                                        <td>@additionalProducts[i].ten</td>
+                                        <td>@additionalProducts[i].gia</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    @RenderPage("/Views/Share/footer.cshtml")
+
+</body>
+</html>

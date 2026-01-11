@@ -1,0 +1,101 @@
+﻿@using jojo.Models;
+@using jojo.DTO;
+@{
+    Layout = null;
+    NhanVienDto employee = ViewBag.nhanvien as NhanVienDto;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/image/logo.ico">
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" type="text/css" />
+    <script src="/Scripts/jquery-3.1.1.min.js"></script>
+    <title>Customers</title>
+    <script>
+        $(document).ready(function () {
+            $('form').submit(function () {
+                var tungay = $('#tungay').val();
+                var toingay = $('#toingay').val();
+
+                if (tungay == "") {
+                    alert("Please enter the 'From Date'");
+                    return false;
+                }
+
+                if (toingay == "") {
+                    alert("Please enter the 'To Date'");
+                    return false;
+                }
+
+            });
+        });
+    </script>
+</head>
+<body>
+    @RenderPage("/Views/Share/nav_quanly.cshtml")
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-offset-3 col-sm-6">
+                <form class="form-horizontal" method="post" action="/ThongKe/KhachHang2">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">From Date</label>
+                        <div class="col-sm-7">
+                            <input type="date" name="tungay" id="tungay" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">To Date</label>
+                        <div class="col-sm-7">
+                            <input type="date" name="toingay" id="toingay" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Customer Name</label>
+                        <div class="col-sm-7">
+                            <input class="form-control" type="text" name="tenkhachhang">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Phone</label>
+                        <div class="col-sm-7">
+                            <input class="form-control" type="text" name="sdtkhachhang">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Address</label>
+                        <div class="col-sm-7">
+                            <input class="form-control" type="text" name="diachi">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Email</label>
+                        <div class="col-sm-7">
+                            <input class="form-control" type="text" name="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Sort By</label>
+                        <div class="col-sm-7">
+                            <select class="form-control" name="sapxep">
+                                <option value="1">Visits</option>
+                                <option value="2">Total Amount</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3"></label>
+                        <div class="col-sm-3">
+                            <input type="submit" class="form-control" value="Confirm">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @RenderPage("/Views/Share/footer.cshtml")
+</body>
+</html>

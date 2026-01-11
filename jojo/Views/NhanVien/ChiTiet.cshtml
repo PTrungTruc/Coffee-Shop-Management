@@ -1,0 +1,95 @@
+﻿@using jojo.Models;
+@using jojo.DTO;
+@{
+    Layout = null;
+    NhanVienDto employee = ViewBag.nhanvien as NhanVienDto;
+    nhanvien employeeDetails = ViewBag.nhanvien2 as nhanvien;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/image/logo.ico">
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" type="text/css" />
+    <title>Employee Details</title>
+    <style>
+        .mypadding tr td {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    @RenderPage("/Views/Share/nav_quanly.cshtml")
+    <div class="container">
+        <div class="panel panel-info">
+            <div class="panel-heading"><h3 class="panel-title">Employee Details</h3></div>
+            <div class="panel-body">
+                <table class="mypadding">
+                    <tbody>
+                        <tr>
+                            <td>ID</td>
+                            <td>@employeeDetails.id</td>
+                        </tr>
+                        <tr>
+                            <td>Full Name</td>
+                            <td>@employeeDetails.hovaten</td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>@employeeDetails.gioitinh</td>
+                        </tr>
+                        <tr>
+                            <td>Date of Birth</td>
+                            <td>@employeeDetails.ngaysinh</td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number</td>
+                            <td>@employeeDetails.sodienthoai</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>@employeeDetails.diachi</td>
+                        </tr>
+                        <tr>
+                            <td>ID Card</td>
+                            <td>@employeeDetails.cmnd</td>
+                        </tr>
+                        <tr>
+                            <td>Start Date</td>
+                            <td>@employeeDetails.ngayvaolam</td>
+                        </tr>
+                        <tr>
+                            <td>Job Title</td>
+                            <td>@employeeDetails.congviec</td>
+                        </tr>
+                        @if (employee.loai == 1)
+                        {
+                            <tr>
+                                <td>Account Type</td>
+                                <td>Employee</td>
+                            </tr>
+                        }
+                        else
+                        {
+                            <tr>
+                                <td>Account Type</td>
+                                <td>Manager</td>
+                            </tr>
+                        }
+                        <tr>
+                            <td>Username</td>
+                            <td>@employeeDetails.taikhoan</td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td>**********</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    @RenderPage("/Views/Share/footer.cshtml")
+</body>
+</html>

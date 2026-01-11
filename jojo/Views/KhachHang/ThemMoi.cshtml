@@ -1,0 +1,98 @@
+﻿@using jojo.Models;
+@using jojo.DTO;
+@{
+    Layout = null;
+    NhanVienDto employee = ViewBag.nhanvien as NhanVienDto;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/image/logo.ico">
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" type="text/css" />
+    <title>Add New Customer</title>
+    <script src="/Scripts/jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('form').submit(function () {
+
+                var ten = $('#ten').val();
+                var sdt = $('#sdt').val();
+
+                if (ten == "") {
+                    alert("Customer name cannot be blank");
+                    return false;
+                }
+
+                if (sdt == "") {
+                    alert("Customer phone number cannot be blank");
+                    return false;
+                }
+
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+    @RenderPage("/Views/Share/nav_quanly.cshtml")
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-offset-3 col-sm-6">
+                <form class="form-horizontal" method="post" action="/KhachHang/ThemMoi2">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">* Full Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="tenkhachhang" id="ten">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">* Phone Number</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="sodienthoai" id="sdt">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Address</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="diachi">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Email</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Note</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" name="ghichu"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Status</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" name="trangthai">
+                                <option value="Updated">Updated</option>
+                                <option value="Not Updated">Not Updated</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <button type="submit" class="btn btn-default">Confirm</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @RenderPage("/Views/Share/footer.cshtml")
+</body>
+</html>

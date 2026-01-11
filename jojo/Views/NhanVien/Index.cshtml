@@ -1,0 +1,64 @@
+﻿@using jojo.Models;
+@using jojo.DTO;
+@{
+    Layout = null;
+    NhanVienDto employee = ViewBag.nhanvien as NhanVienDto;
+    List<nhanvien> employees = ViewBag.nhanviens as List<nhanvien>;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/image/logo.ico">
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" type="text/css" />
+    <script src="/Scripts/jquery-3.1.1.min.js"></script>
+    <title>Employees</title>
+    <script>
+        function Xoa(id) { // Consider renaming this to Delete()
+            var r = confirm("Are you sure you want to delete this employee?");
+            if (r == true) {
+                window.location = "/Admin/XoaNhanVien?id=" + id; // Consider renaming XoaNhanVien to DeleteEmployee in your controller
+            }
+        }
+    </script>
+    <style>
+        .minheight {
+            min-height: 370px;
+        }
+    </style>
+</head>
+<body>
+    @RenderPage("/Views/Share/nav_quanly.cshtml")
+    <div class="container minheight">
+
+        <br /><br /><br />
+        <table class="table table-striped mx-auto">
+            <thead>
+                <tr>
+                    <th class="col-sm-1">#</th>
+                    <th class="col-sm-3">Full Name</th>
+                    <th class="col-sm-2">Job Title</th>
+                    <th class="col-sm-2">Username</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < employees.Count; i++)
+                {
+                    <tr>
+                        <td class="col-sm-1">@(i + 1)</td>
+                        <td class="col-sm-3">@employees[i].hovaten</td>
+                        <td class="col-sm-2">@employees[i].congviec</td>
+                        <td class="col-sm-2">@employees[i].taikhoan</td>
+                        <td><a target="_blank" href="/NhanVien/ChiTiet?id=@employees[i].id" class="btn btn-success">Details</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    @RenderPage("/Views/Share/footer.cshtml")
+</body>
+</html>

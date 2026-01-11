@@ -1,0 +1,110 @@
+﻿@using jojo.Models;
+@using jojo.DTO;
+@{
+    Layout = null;
+    NhanVienDto employee = ViewBag.nhanvien as NhanVienDto;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/image/logo.ico">
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" type="text/css" />
+    <script src="/Scripts/jquery-3.1.1.min.js"></script>
+    <title>Statistics</title>
+
+    <!-- Custom CSS for hover effect -->
+    <style>
+        /* Default state: display static image */
+        .gif-container img.gif-static {
+            display: block;
+        }
+
+        /* Hover state: display animated GIF */
+        .gif-container:hover img.gif-static {
+            display: none;
+        }
+
+        .gif-container:hover img.gif-animated {
+            display: block;
+        }
+
+        /* Initially hide the animated GIF */
+        .gif-container img.gif-animated {
+            display: none;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            // You can add more interactivity here if needed
+        });
+    </script>
+</head>
+
+<body>
+    @RenderPage("/Views/Share/nav_quanly.cshtml")
+
+    <div class="container">
+        <br /><br />
+        <div class="row">
+            <!-- Revenue Statistics -->
+            <div class="col-md-3">
+                <div class="thumbnail gif-container">
+                    <a href="/ThongKe/DoanhThu">
+                        <img src="~/image/money-bag.png" alt="Revenue" style="width:100%" class="gif-static">
+                        <img src="~/image/money-bag.gif" alt="Revenue Animated" style="width:100%" class="gif-animated">
+                        <div class="caption">
+                            <p class="text-center">Revenue Statistics</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Customer Statistics -->
+            <div class="col-md-3">
+                <div class="thumbnail gif-container">
+                    <a href="/ThongKe/KhachHang">
+                        <img src="~/image/husband.png" alt="Customer" style="width:100%" class="gif-static">
+                        <img src="~/image/husband.gif" alt="Customer Animated" style="width:100%" class="gif-animated">
+                        <div class="caption">
+                            <p class="text-center">Customer Statistics</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product Statistics -->
+            <div class="col-md-3">
+                <div class="thumbnail gif-container">
+                    <a href="/ThongKe/SanPham">
+                        <img src="~/image/coffee-cup.png" alt="Product" style="width:100%" class="gif-static">
+                        <img src="~/image/coffee-cup.gif" alt="Product Animated" style="width:100%" class="gif-animated">
+                        <div class="caption">
+                            <p class="text-center">Product Statistics</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Expense Statistics -->
+            <div class="col-md-3">
+                <div class="thumbnail gif-container">
+                    <a href="/ThongKe/ChiPhi">
+                        <img src="~/image/accounting.png" alt="Expense" style="width:100%" class="gif-static">
+                        <img src="~/image/accounting.gif" alt="Expense Animated" style="width:100%" class="gif-animated">
+                        <div class="caption">
+                            <p class="text-center">Expense Statistics</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @RenderPage("/Views/Share/footer.cshtml")
+</body>
+
+</html>

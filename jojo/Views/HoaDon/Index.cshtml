@@ -1,0 +1,69 @@
+﻿@using jojo.Models;
+@using jojo.DTO;
+@{
+    Layout = null;
+    NhanVienDto employee = ViewBag.nhanvien as NhanVienDto;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/image/logo.ico">
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" type="text/css" />
+    <script src="/Scripts/jquery-3.1.1.min.js"></script>
+    <title>Invoices</title>
+    <script>
+        $(document).ready(function () {
+
+            $('form').submit(function () {
+                var ngay = $('#ngay').val();
+
+                if (ngay == "") {
+                    alert("Please enter a date");
+                    return false;
+                }
+
+            });
+        });
+    </script>
+
+    <style>
+        .maxheight {
+            min-height: 370px;
+        }
+    </style>
+</head>
+<body>
+    @if (employee.loai == 1)
+    {
+        @RenderPage("/Views/Share/nav_nhanvien.cshtml")
+    }
+    else
+    {
+        @RenderPage("/Views/Share/nav_quanly.cshtml")
+    }
+    <div class="container maxheight">
+        <div class="row">
+            <div class="col-sm-offset-4 col-sm-4">
+                <form class="form-horizontal" method="post" action="/HoaDon/LichSu">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Date</label>
+                        <div class="col-sm-10">
+                            <input type="date" name="ngay" id="ngay" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2"></label>
+                        <div class="col-sm-6">
+                            <input type="submit" class="form-control" value="View"> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @RenderPage("/Views/Share/footer.cshtml")
+</body>
+</html>
