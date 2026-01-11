@@ -1,0 +1,15 @@
+{
+    "version": "1.0",
+    "defaultProvider": "cdnjs",
+    "libraries": [],
+    "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft.AspNetCore": "Warning"
+        }
+    },
+    "AllowedHosts": "*",
+    "ConnectionStrings": {
+        "constring": "Data Source=DESKTOP-1VQ65UM;Initial Catalog=jojodb;Integrated Security=True"
+    }
+}
